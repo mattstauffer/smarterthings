@@ -10,6 +10,7 @@
     + Drivers (Device Handler)
     + Tutorials
     + Users
+    + Tags
     + Ratings
     + Comments
 - Question: how do we handle:
@@ -56,3 +57,4 @@ Next steps:
 - [ ] Install Scout and use it for search
 - [ ] Add snippets
 - [ ] Add manufacturers and devices
+- [ ] Add tags
