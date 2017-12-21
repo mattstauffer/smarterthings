@@ -9,6 +9,7 @@ class DeviceHandlerController extends Controller
 {
     public function show(DeviceHandler $handler)
     {
-        return $handler;
+        return view('handlers.show')
+            ->with('handler', $handler);
     }
 }

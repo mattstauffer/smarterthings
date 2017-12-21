@@ -48,3 +48,11 @@ Better later URL structure:
 
 smarterthings.dev/device-handlers/sonoff/basic/
 smarterthings.dev/smart-apps/app-name-slugged/
+
+
+Next steps:
+- [ ] Fix URL structure
+- [ ] Write tests
+- [ ] Install Scout and use it for search
+- [ ] Add snippets
+- [ ] Add manufacturers and devices
