@@ -16,8 +16,28 @@
 
                     <form action="{{ route('search') }}">
                         <input type="text" name="q">
-                        <input type="submit">
+                        <input type="submit" value="Search">
                     </form>
+                </div>
+            </div>
+
+            <div class="panel panel-default">
+                <div class="panel-heading">Recently-added handlers</div>
+
+                <div class="panel-body">
+                    @foreach ($latest as $handler)
+                        &bull; <a href="{{ $handler->url }}">{{ $handler->title }}</a><br>
+                    @endforeach
+                </div>
+            </div>
+
+            <div class="panel panel-default">
+                <div class="panel-heading">Browse Manufacturer</div>
+
+                <div class="panel-body">
+                    @foreach ($manufacturers as $manufacturer)
+                        &bull; <a href="{{ $manufacturer->url }}">{{ $manufacturer->name }}</a><br>
+                    @endforeach
                 </div>
             </div>
         </div>

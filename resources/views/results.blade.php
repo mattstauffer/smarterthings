@@ -9,7 +9,7 @@
 
                 <div class="panel-body">
                     @forelse ($results as $result)
-                        &bull; <a href="{{ route('devicehandlers.show', $result) }}">{{ $result->title }}</a>
+                        &bull; <a href="{{ route('devicehandlers.show', $result) }}">{{ $result->title }}</a><br>
                     @empty
                         No results!
                     @endforelse
