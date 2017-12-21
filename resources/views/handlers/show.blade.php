@@ -12,7 +12,7 @@
                     &bull; <a href="{{ $handler->discourse_url }}">Discourse thread</a><br>
                     <hr>
 
-                    {{ $handler->post }}
+                    {!! $handler->post !!}
                 </div>
             </div>
         </div>
