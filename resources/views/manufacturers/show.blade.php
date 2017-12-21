@@ -13,11 +13,13 @@
 
                     <h2>Devices</h2>
                     @foreach ($manufacturer->devices()->with('handlers')->get() as $device)
-                        <strong>{{ $device->name }}</strong><br>
+                        <a href="{{ $device->url }}" style="font-weight: bold;">{{ $device->name }}</a><br>
                         Handlers:<br>
-                        @foreach ($device->handlers as $handler)
+                        @forelse ($device->handlers as $handler)
                             &bull; <a href="{{ $handler->url }}">{{ $handler->title }}</a>
-                        @endforeach
+                        @empty
+                            <i>(none yet)</i>
+                        @endforelse
                         <br><br>
                     @endforeach
                 </div>

@@ -10,6 +10,8 @@
                 <div class="panel-body">
                     By <a href="https://community.smartthings.com/u/{{ $handler->author }}/summary">{{ $handler->author }}</a><br>
                     <a href="{{ $handler->discourse_url }}">Discourse thread</a><br>
+                    Manufacturer: <a href="{{ $handler->device->manufacturer->url }}">{{ $handler->device->manufacturer->name }}</a><br>
+                    Device: <a href="{{ $handler->device->url }}">{{ $handler->device->name }}</a><br>
                     Released: {{ $handler->created_at->format("M j, 'y") }}<br>
                     Updated: {{ $handler->updated_at->format("M j, 'y") }}
                     <hr>

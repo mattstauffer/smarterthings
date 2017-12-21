@@ -25,14 +25,24 @@
                 <div class="panel-heading">Recently-added handlers</div>
 
                 <div class="panel-body">
-                    @foreach ($latest as $handler)
+                    @foreach ($latestHandlers as $handler)
                         &bull; <a href="{{ $handler->url }}">{{ $handler->title }}</a><br>
                     @endforeach
                 </div>
             </div>
 
             <div class="panel panel-default">
-                <div class="panel-heading">Browse Manufacturer</div>
+                <div class="panel-heading">Recently-added devices</div>
+
+                <div class="panel-body">
+                    @foreach ($latestDevices as $device)
+                        &bull; <a href="{{ $device->url }}">{{ $device->name }}</a><br>
+                    @endforeach
+                </div>
+            </div>
+
+            <div class="panel panel-default">
+                <div class="panel-heading">Browse Manufacturers</div>
 
                 <div class="panel-body">
                     @foreach ($manufacturers as $manufacturer)

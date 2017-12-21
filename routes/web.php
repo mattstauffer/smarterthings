@@ -1,10 +1,6 @@
 <?php
 
-Route::get('/', function () {
-    $latest = \App\DeviceHandler::latest()->limit(5)->get();
-    $manufacturers = \App\Manufacturer::orderBy('name')->get();
-    return view('welcome')->with('latest', $latest)->with('manufacturers', $manufacturers);
-});
+Route::get('/', 'WelcomeController')->name('welcome');
 
 Auth::routes();
 
