@@ -1,5 +1,6 @@
 <?php
 
+use App\Device;
 use App\DeviceHandler;
 use App\Manufacturer;
 use Illuminate\Database\Seeder;
@@ -14,7 +15,9 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // $this->call(UsersTableSeeder::class);
-        factory(DeviceHandler::class)->create();
-        factory(Manufacturer::class)->create();
+
+        $manufacturer = factory(Manufacturer::class)->create();
+        $device = factory(Device::class)->create(['manufacturer_id' => $manufacturer->id]);
+        factory(DeviceHandler::class)->create(['device_id' => $device->id]);
     }
 }

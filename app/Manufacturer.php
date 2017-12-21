@@ -12,4 +12,9 @@ class Manufacturer extends Model
     {
         return route('manufacturers.show', $this);
     }
+
+    public function devices()
+    {
+        return $this->hasMany(Device::class);
+    }
 }

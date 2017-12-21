@@ -11,8 +11,15 @@
                     <a href="{{ $manufacturer->website }}">Web site</a><br>
                     <hr>
 
-                    @todo: List all devices<br>
-                    @todo: List handlers for each device<br>
+                    <h2>Devices</h2>
+                    @foreach ($manufacturer->devices()->with('handlers')->get() as $device)
+                        <strong>{{ $device->name }}</strong><br>
+                        Handlers:<br>
+                        @foreach ($device->handlers as $handler)
+                            &bull; <a href="{{ $handler->url }}">{{ $handler->title }}</a>
+                        @endforeach
+                        <br><br>
+                    @endforeach
                 </div>
             </div>
         </div>

@@ -10,6 +10,11 @@ class DeviceHandler extends Model
 
     public function getUrlAttribute()
     {
-        return route('devicehandlers.show', $this);
+        return route('manufacturers.devices.handlers.show', [$this->device->manufacturer_id, $this->device_id, $this->id]);
+    }
+
+    public function device()
+    {
+        return $this->belongsTo(Device::class);
     }
 }

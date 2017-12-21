@@ -52,8 +52,9 @@ smarterthings.dev/smart-apps/app-name-slugged/
 
 
 Next steps:
-- [ ] Add manufacturers and devices
-- [ ] Fix URL structure
+- [x] Add manufacturers and devices
+- [x] Fix URL structure
+- [ ] Add slugs to all and update URLs to use slugs
 - [ ] Write tests
 - [ ] Install Scout and use it for search
 - [ ] Add snippets
