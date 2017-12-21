@@ -43,3 +43,8 @@ Have to build to make the simplest use case:
 - Model/migration for device handlers
 - Basic search
 - Device handler show page
+
+Better later URL structure:
+
+smarterthings.dev/device-handlers/sonoff/basic/
+smarterthings.dev/smart-apps/app-name-slugged/

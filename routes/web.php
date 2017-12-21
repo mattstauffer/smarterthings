@@ -19,3 +19,8 @@ Auth::routes();
 
 Route::get('home', 'HomeController@index')->name('home');
 Route::get('search', 'SearchController')->name('search');
+
+Route::group(['as' => 'devicehandlers.', 'prefix' => 'device-handlers'], function () {
+    Route::get('{handler}', 'DeviceHandlerController@show')->name('show');
+});
+

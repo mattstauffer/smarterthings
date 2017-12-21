@@ -11,6 +11,8 @@ class SearchController extends Controller
     {
         $term = request('q');
 
-        return DeviceHandler::where('title', 'like', "%$term%")->get();
+        return view('results')
+            ->with('term', $term)
+            ->with('results', DeviceHandler::where('title', 'like', "%$term%")->get());
     }
 }
