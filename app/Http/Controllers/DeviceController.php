@@ -3,13 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Device;
+use App\Manufacturer;
 use Exception;
 
 class DeviceController extends Controller
 {
-    public function show($manufacturer_id, Device $device)
+    public function show(Manufacturer $manufacturer, Device $device)
     {
-        if ($manufacturer_id != $device->manufacturer_id) {
+        if ($manufacturer->id != $device->manufacturer_id) {
             throw new Exception("Invalid URL");
         }
 

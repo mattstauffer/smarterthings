@@ -10,7 +10,7 @@ class DeviceHandler extends Model
 
     public function getUrlAttribute()
     {
-        return route('manufacturers.devices.handlers.show', [$this->device->manufacturer_id, $this->device_id, $this->id]);
+        return route('manufacturers.devices.handlers.show', [$this->device->manufacturer, $this->device, $this]);
     }
 
     public function device()

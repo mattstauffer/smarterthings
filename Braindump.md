@@ -18,6 +18,7 @@
     + Screenshots
     + Blog posts
     + Discourse-style comment threads
+    + FAQ?
 
 
 ## Device Handler
@@ -28,34 +29,33 @@
 - One to many: Snippets
     + Gist URL
     + Descriptive text
-    + (type)
+    + (type -- at least could be device handler, firmware, child device handler... is this really gropuable or is this just a title/nickname?)
+    + VERSIONING. 
 - Blog post (?) ... with images... ?
 - Discourse
 
-
-## Simplest use case:
-
-Matt sees Wes' tweet about Sonoff;
-Visits smarterthings.co
-Types "Sonoff" into a search
-Sees a Sonoff Device Handler in the results
-
-Have to build to make the simplest use case:
-- Model/migration for device handlers
-- Basic search
-- Device handler show page
-
-Better later URL structure:
-
-smarterthings.dev/device-handlers/sonoff/basic/
-smarterthings.dev/smart-apps/app-name-slugged/
-
+## Device
+- hasMany pictures
+- primary picture
+- model(s)
+- type
+- capabilities
+- "device type author" (?)
+- details/information/something.. basically the body from thingsthataresmart wiki
+- is officially supported? boolean
+- probably the ability to group devices? e.g. http://thingsthataresmart.wiki/index.php?title=TP-Link_Plugs_and_Bulbs
 
 Next steps:
 - [x] Add manufacturers and devices
 - [x] Fix URL structure
-- [ ] Add slugs to all and update URLs to use slugs
+- [x] Add slugs to all and update URLs to use slugs
+- [ ] Make a simple id-based route for all entities so we don't always have to be building these crazy URL structures
 - [ ] Write tests
 - [ ] Install Scout and use it for search
 - [ ] Add snippets
 - [ ] Add tags
+- [ ] Add smart apps
+- [ ] Design
+- [ ] Consider dropping "manufacturers" from URL?
+- [ ] See if we can simplify the cost of linking to handlers when they have to look up both their device and their manufacturer to link to themselves
+- [ ] Consider a non-auto-incrementing handler ID for urls
