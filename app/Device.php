@@ -12,7 +12,7 @@ class Device extends Model
 
     public function getUrlAttribute()
     {
-        return route('manufacturers.devices.show', [$this->manufacturer, $this]);
+        return route('devices.show', [$this->manufacturer, $this]);
     }
 
     public function handlers()
@@ -23,5 +23,12 @@ class Device extends Model
     public function manufacturer()
     {
         return $this->belongsTo(Manufacturer::class);
+    }
+
+    public static function protocols()
+    {
+        return [
+            'zigbee', 'zwave', 'wifi', 'bluetooth'
+        ];
     }
 }

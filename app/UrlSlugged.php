@@ -4,9 +4,9 @@ namespace App;
 
 trait UrlSlugged
 {
-    protected $slugKey = 'name';
+    static $slugKey = 'name';
 
-    public function bootSlugging()
+    public static function bootUrlSlugged()
     {
         static::creating(function ($model) {
             if (! $model->slug) {

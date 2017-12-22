@@ -14,7 +14,9 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    &bull; <a href="{{ route('admin.manufacturers.index') }}">Manufacturers</a><br>
+                    &bull; <a href="{{ route('admin.devices.index') }}">Devices</a><br>
+                    &bull; <a href="{{ route('admin.handlers.index') }}">Device Handlers</a><br>
                 </div>
             </div>
         </div>

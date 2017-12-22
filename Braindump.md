@@ -49,6 +49,8 @@ Next steps:
 - [x] Add manufacturers and devices
 - [x] Fix URL structure
 - [x] Add slugs to all and update URLs to use slugs
+- [ ] Make it possible for users to add their own
+- [ ] Make it possible for admins to curate manual additions
 - [ ] Make a simple id-based route for all entities so we don't always have to be building these crazy URL structures
 - [ ] Write tests
 - [ ] Install Scout and use it for search
