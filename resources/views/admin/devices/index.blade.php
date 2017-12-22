@@ -27,13 +27,13 @@
                             <td>{{ $device->protocol }}</td>
                             @if (auth()->user()->isAdmin())
                             <td>
-                                <a href="{{ route('admin.devices.destroy', [$device]) }}"
+                                <a href="{{ route('admin.devices.destroy', [$device->manufacturer, $device]) }}"
                                     onclick="event.preventDefault();
                                              document.getElementById('delete-device-form-{{ $device->id }}').submit();">
                                     Delete
                                 </a>
 
-                                <form id="delete-device-form-{{ $device->id }}" action="{{ route('admin.devices.destroy', [$device]) }}" method="POST" style="display: none;">
+                                <form id="delete-device-form-{{ $device->id }}" action="{{ route('admin.devices.destroy', [$device->manufacturer, $device]) }}" method="POST" style="display: none;">
                                     <input type="hidden" name="_method" value="delete">
                                     {{ csrf_field() }}
                                 </form>

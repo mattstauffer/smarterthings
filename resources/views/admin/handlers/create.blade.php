@@ -10,30 +10,25 @@
                 <div class="panel-body">
                     @include('components.form-errors')
 
-                    <form action="{{ route('admin.devices.store') }}" method="post">
+                    <form action="{{ route('admin.handlers.store') }}" method="post">
                         {{ csrf_field() }}
-                        <label for="name">Name</label><br>
-                        <input type="text" name="name" value="{{ old('name') }}"><br><br>
+                        <label for="title">Title</label><br>
+                        <input type="text" name="title" value="{{ old('title') }}"><br><br>
 
-                        <label for="description">Description</label><br>
-                        <textarea name="description">{{ old('description') }}</textarea><br><br>
+                        <label for="author">Author's Discourse Username</label><br>
+                        <input type="text" name="author" value="{{ old('author') }}"><br><br>
 
-                        <label for="website">Website</label><br>
-                        <input type="text" name="website" value="{{ old('website') }}"><br><br>
+                        <label for="post">Post (HTML)</label><br>
+                        <textarea name="post">{{ old('post') }}</textarea><br><br>
 
-                        <label for="protocol">Protocol</label><br>
-                        <select name="protocol">
+                        <label for="discourse_url">Discourse Thread URL</label><br>
+                        <input type="text" name="discourse_url" value="{{ old('discourse_url') }}"><br><br>
+
+                        <label for="device">Device</label><br>
+                        <select name="device">
                             <option></option>
-                        @foreach ($protocols as $protocol)
-                            <option value="{{ $protocol }}"{{ old('protocol') == $protocol ? ' selected' : '' }}>{{ $protocol }}</option>
-                        @endforeach
-                        </select><br><br>
-
-                        <label for="manufacturer">Manufacturer</label><br>
-                        <select name="manufacturer">
-                            <option></option>
-                        @foreach ($manufacturers as $manufacturer)
-                            <option value="{{ $manufacturer->id }}"{{ old('manufacturer') == $manufacturer->id ? ' selected' : '' }}>{{ $manufacturer->name }}</option>
+                        @foreach ($devices as $device)
+                            <option value="{{ $device->id }}"{{ old('device') == $device->id ? ' selected' : '' }}>{{ $device->name }}</option>
                         @endforeach
                         </select><br><br>
 

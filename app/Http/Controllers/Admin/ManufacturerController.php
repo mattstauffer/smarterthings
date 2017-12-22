@@ -31,9 +31,9 @@ class ManufacturerController extends Controller
         return redirect()->route('admin.manufacturers.index');
     }
 
-    public function destroy(Manufacturer $device)
+    public function destroy(Manufacturer $manufacturer)
     {
-        $device->delete();
+        $manufacturer->delete();
 
         return redirect()->route('admin.manufacturers.index');
     }
