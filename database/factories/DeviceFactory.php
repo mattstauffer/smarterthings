@@ -7,5 +7,6 @@ $factory->define(App\Device::class, function (Faker $faker) {
         'name' => $faker->company,
         'description' => $faker->paragraph,
         'website' => $faker->url,
+        'protocol' => array_rand(['zigbee', 'zwave', 'bluetooth', 'wifi']),
     ];
 });

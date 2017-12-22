@@ -14,7 +14,7 @@ class AddProtocolToDevicesTable extends Migration
     public function up()
     {
         Schema::table('devices', function (Blueprint $table) {
-            $table->string('protocol'); // enum-ish (ZigBee, Z-Wave, etc.)
+            $table->string('protocol')->nullable(); // enum-ish (ZigBee, Z-Wave, etc.)
         });
     }
 
