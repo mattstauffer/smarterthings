@@ -20,6 +20,10 @@
     + Discourse-style comment threads
     + FAQ?
 
+## More user stories
+- "give me a list of all the SmartThings-compatible plugs"
+- "let me host (or find) a tutorial about some SmartThings connected thing on a Raspberry Pi"
+
 
 ## Device Handler
 
